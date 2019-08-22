@@ -11,7 +11,14 @@ public class Test1 {
 
 	public static String getContentPage(boolean withTime) {
 		String htmlPage = "<!DOCTYPE> <html><head><title>Message with timestamp</title></head><body>";
-		htmlPage += "<h2>" + (withTime ? LocalDateTime.now() : LocalDate.now()) + "</h2>";
+		
+		if(withTime)
+			htmlPage += "<h2> Provided just current time </h2>";
+		else
+			htmlPage += "<h2> Provided timestamp of the moment in which the service was called </h2>";
+		
+		htmlPage += "<p>" + (withTime ? LocalDateTime.now() : LocalDate.now()) + "</p>";
+		
 		htmlPage += "</body></html>";
 		
 		return htmlPage;
