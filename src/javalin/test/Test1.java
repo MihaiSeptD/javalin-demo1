@@ -13,7 +13,6 @@ public class Test1 {
 		String htmlPage = "<!DOCTYPE> <html><head><title>Message with timestamp</title></head><body>";
 
 		htmlPage += "<h2>" + (withTime? LocalDateTime.now() : LocalDate.now()) + "</h2>";
-		htmlPage += "<h4>" + "here is a new header" + "</h4>";
 		htmlPage += "</body></html>";
 		
 		return htmlPage;
